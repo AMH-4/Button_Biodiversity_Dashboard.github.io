@@ -79,7 +79,7 @@ function buildCharts(sample) {
     var otu_id = top_otu_ids.map(d => "OTU " + d);
     console.log(`OTU IDS: ${otu_id}`)
     
-    var yticks = = otu_id;
+    var yticks = otu_id;
 
     // 8. Create the trace for the bar chart. 
     var trace = {
