@@ -105,3 +105,37 @@ function buildCharts(sample) {
     Plotly.newPlot('bar', barData, barLayout, config);
   });
 }
+
+//Delvierable 2 - Bubble Chart 
+
+ // 1. Create the trace for the bubble chart.
+ var trace = {
+  x: result.otu_ids,
+  y: result.sample_values,
+  mode: 'markers',
+  marker: {
+    size: result.sample_values,
+    color: result.otu_ids,
+    colorscale: 'Earth',
+    
+  },
+  text: result.otu_labels
+};
+var bubbleData = [trace];
+
+
+// 2. Create the layout for the bubble chart.
+var titleText = "<b>Bacteria Cultures Per Sample</b>";
+    var bubbleLayout = {
+      title: titleText,
+      hovermode: true,
+      xaxis:{
+        title: "OTU ID"},
+        autosize: true
+        //width: 1200, height: 500
+    };
+    var config = {responsive: true};
+
+// 3. Use Plotly to plot the data with the layout.
+Plotly.newPlot('bubble', bubbleData, bubbleLayout, config); 
+
