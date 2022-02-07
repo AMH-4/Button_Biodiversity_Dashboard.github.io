@@ -109,7 +109,7 @@ function buildCharts(sample) {
 //Delvierable 2 - Bubble Chart 
 
  // 1. Create the trace for the bubble chart.
- var trace = {
+ var trace2 = {
   x: result.otu_ids,
   y: result.sample_values,
   mode: 'markers',
