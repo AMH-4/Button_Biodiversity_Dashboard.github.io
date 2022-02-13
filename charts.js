@@ -106,10 +106,12 @@ function buildCharts(sample) {
   });
 }
 
+
+
 //Delvierable 2 - Bubble Chart 
 
  // 1. Create the trace for the bubble chart.
- var trace2 = {
+ var trace = {
   x: otu_ids,
   y: sample_values,
   mode: 'markers',
@@ -222,7 +224,6 @@ Plotly.newPlot('bubble', bubbleData, bubbleLayout, config);
 
     // 6. Use Plotly to plot the gauge data and layout.
     Plotly.newPlot("gauge", gaugeData, gaugeLayout, config);
-  });
-};
+
   
   
